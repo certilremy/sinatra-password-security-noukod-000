@@ -30,9 +30,9 @@ end
 		erb :login
 	end
 
-	post "/login" do
-		#your code here!
-	end
+  post "/login" do
+  user = User.find_by(:username => params[:username])
+end
 
 	get "/success" do
 		if logged_in?
